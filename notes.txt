@@ -1,0 +1,34 @@
+# CREATE
+# ALTERNATIVE BUT MESSY
+# myLabel1 = Label(root, text = "Hello GUYSSSSSS").grid(row = 0, column = 0) --> ASS
+# myLabel2 = Label(root, text = "Hello LE").grid(row = 1, column = 10) --> ASS
+
+# myLabel1 = Label(root, text = "Hello GUYSSSSSS")
+# myLabel2 = Label(root, text = "Hello LE")
+
+# PUT SOMETHING
+# if want to stay at one spot, use .pack instead of .grid
+
+# myLabel1.grid(row = 0, column = 0)
+# myLabel2.grid(row = 1, column = 10)
+ 
+ --------------------------------------- BUTTON AND ENTRY STUFF
+
+from tkinter import *
+root = Tk()
+
+e = Entry(root, width = 50, fg ="yellow", bg = "black", borderwidth = 10)
+e.pack()
+# e.insert(0, "Enter your name: ")
+
+def myClick():
+    hello = "Hello " + e.get() + "!"
+    myLabel = Label(root, text = hello,  fg="blue", bg = "black")
+    myLabel.pack()
+
+
+myButton = Button(root, text = "Confirm", command = myClick, fg="blue", bg = "black")
+myButton.pack()
+
+
+root.mainloop()
